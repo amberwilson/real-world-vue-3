@@ -1,6 +1,7 @@
 import EventDetails from '@/components/EventDetails';
 import About from '@/views/About';
 import EventList from '@/views/EventList';
+import NotFound from '@/views/NotFound';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
@@ -20,6 +21,7 @@ const routes = [
     name: 'About',
     component: About,
   },
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ];
 
 const router = createRouter({
